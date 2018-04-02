@@ -1,0 +1,45 @@
+.pagination {
+    text-align: center;
+
+	.container {
+		background: $white;
+		padding: 30px 0;
+	}
+}
+.pagination__control, .pagination__list, .pagination__item {
+	@include inlineblock(middle);
+}
+
+.pagination__link {
+	width: 40px;   
+	text-align: center;
+    display: inline-block;
+    color: $black;
+    font-size: 16px;
+
+	 &:hover {
+		 color: $red;
+	 }
+}
+.pagination__control {
+	text-align: center;
+    display: inline-block;
+	color: $green;
+	font-size: 20px;
+	width: 40px;
+
+	&:hover {
+		color: $red;
+	} 
+}
+.footer {
+	.container {
+		padding-top: 40px;
+        text-align: center;
+        color: $black;
+        font-size: 13px;
+	}
+}
+.footer__address {
+	margin-bottom: 15px;
+}

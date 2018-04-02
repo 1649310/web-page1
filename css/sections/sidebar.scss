@@ -1,0 +1,91 @@
+/* --------- breadcrumbs --------- */
+
+.breadcrumbs {
+	margin-bottom: 10px;
+}
+.breadcrumbs__item {
+	@include inlineblock;
+	margin-left: 10px;
+
+	&:first-child {  
+		margin-left: 0;
+		.breadcrumbs__link {
+			&::before {
+				display: none;
+			}
+		}
+	}
+}
+.breadcrumbs__link {
+	font-size: 11px;
+	color: $red;
+	vertical-align: middle;
+
+	&::before {
+		content: "";
+		display: inline-block;
+		background: url("../img/decor/arrow.png") 0 0 no-repeat;
+		width: 17px;
+		height: 7px;
+		margin-right: 15px;
+		vertical-align: middle;
+	}
+}
+.title {
+	@include helvetica(light);
+	font-size: 24px;
+	color: $black;
+	margin-top: 0; 
+	font-weight: normal;
+}
+.content-wrapper {
+	.container {
+		background: $white;
+		@include clearfix;
+	}
+}
+
+.sidebar {
+	float: left;
+	width: 25%;
+}
+
+.categories__item {
+	border-bottom: 1px solid $green;
+	position: relative;
+}
+
+.categories__link {
+	display: block;
+	padding: 10px 50px 10px 20px;
+	font-size: 0; 
+}
+
+.categories__icon {
+	@include inlineblock(middle);
+	width: 10%;  
+}
+
+.categories__text {
+	@include inlineblock(middle);
+	width: 90%;
+	font-size: 14px;
+    padding-left: 20px;
+    color: $black;
+}
+
+.categories__amount {
+	position: absolute;
+	font-size: 14px;
+	line-height: 16px; 
+	top: 50%;
+	margin-top: -8px;
+    right: 10px;
+    color: rgba($black, .5);
+}
+
+use  {
+	fill: $white;
+	width: 32px;
+	height: 32px;
+}
